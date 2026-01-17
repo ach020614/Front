@@ -11,7 +11,7 @@
         <!-- 공통 css 스타일 -->
         <link rel="stylesheet" href="/static/css/common/reset.css">
         <!-- fontawesome 꾸며진 폰트 -->
-        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="style.css"> -->
         <!-- 유틸 css -->
          <link rel="stylesheet" href="/static/css/common/util.css">
         <!-- 개별 css 스타일 -->
@@ -38,15 +38,16 @@
                                                 <div class="inner-datepicker">
                                                     <!-- 캘린더 아이콘 -->
                                                     <!-- <i class="fa-regular fa-calendar" style="color: #7d7d7d;"></i>/ -->
-                                                     <img class="icon icon-calendar" src="/static/css/images/icon_calendar-regular-full.svg">
+                                                     <img class="icon icon-calendar" src="/static/images/icon-calendar.svg">
                                                     <input type="text" class="tf-comm datepicker-range right" id="datepicker" readonly="" />
                                                     <span class="fz-12 fc-2" id="datepickerSpan">최근 30일</span>
                                                 </div>
+                                                <!-- 좌 우 버튼 -->
                                                 <button type="button" class="btn btn-prev">
-                                                    <img class="icon" src="/static/css/images/icon_chevron-left-solid-full.svg" >
+                                                    <img src="/static/images/icon_arrow_left.svg" >
                                                 </button>
                                                 <button type="button" class="btn btn-next">
-                                                    <img class="icon" src="/static/css/images/icon_angle-right-solid-full.svg">
+                                                    <img src="/static/images/icon_arrow_right.svg">
                                                 </button>
                                             </div>
                                         </div>
@@ -82,7 +83,8 @@
                                             <div class="input-group comp-search">
                                                 <div class="inner-input-group">
                                                     <input id="keyword" type="text" class="tf-comm" placeholder="검색어를 입력해 주세요." value="" />
-                                                    <i class="ico ico-search"></i>
+                                                    <!-- <i class="ico ico-search"></i> -->
+                                                    <img class="icon icon-search" src="/static/images/icon_search.svg">
                                                 </div>
                                             </div>
                                         </div>

@@ -161,7 +161,7 @@ article, aside, figcaption, figure, footer, header, nav, section {
     bottom: 0;
     z-index: 1;
     margin: auto;
-    background: url(/static/css/images/icon_calendar-regular-full.svg) no-repeat;
+    background: url(/static/images/icon-calendar.svg) no-repeat;
 }
 
 .tf-textarea, .tf-comm {
@@ -214,6 +214,7 @@ article, aside, figcaption, figure, footer, header, nav, section {
     text-align: center;
 }
 
+/* button */
 .btn {
     display: inline-block;
     min-width: 150px;
@@ -239,11 +240,11 @@ article, aside, figcaption, figure, footer, header, nav, section {
 
 .comp-datepicker .btn.btn-prev img {
  vertical-align: middle;
- background: url(/static/css/images/icon_chevron-left-solid-full.svg) no-repeat center #fafafb;
+ background: url(/static/images/icon_arrow_left.svg) no-repeat center #fafafb;
 }
 .comp-datepicker .btn.btn-next img {
  vertical-align: middle;
- background: url(/static/css/images/icon_angle-right-solid-full.svg) no-repeat center #fafafb;
+ background: url(/static/images/icon_arrow_right.svg) no-repeat center #fafafb;
 }
 
 .btn.btn-prev, .btn.btn-next {
@@ -325,4 +326,13 @@ article, aside, figcaption, figure, footer, header, nav, section {
 
 .input-group.comp-search .tf-comm {
     padding-left: 42px;
+}
+
+.input-group.comp-search .icon-search {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    margin: auto;
+    background: url(/static/images/icon_search.svg) no-repeat;
 }
