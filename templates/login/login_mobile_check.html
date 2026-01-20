@@ -684,9 +684,7 @@ svg:not(:root) {
     background-color: transparent;
     outline: none;
 }
-.Tooltip-module_button__1c562 .Tooltip-module_helpIcon__a2bd6, .Tooltip-module_button__1c562.Tooltip-module_open__b6fe8 .Tooltip-module_helpOutlineIcon__399ac {
-    display: none;
-}
+
 
 .WithProps-module_icon__d564b {
     display: block;
@@ -733,31 +731,228 @@ svg:not(:root) {
     align-items: center;
 }
 
-
-.Tooltip-moudle_button__1c562 .Tooltip-module_helpIcon__a2bd6 {
+/* ? 버튼 토글 상태  */
+.Tooltip-module_helpIcon__a2bd6 {
     display: none;
 }
 
-.Tooltip-moudle_button__1c562 .Tooltip-module_helpOutlineIcon__399ac {
+.Tooltip-module_helpOutlineIcon__399ac {
     display: block;
 }
 
-.Tooltip-moudle_button__1c562.active .Tooltip-module_helpIcon__a2bd6 {
-    display: block;
-}
-.Tooltip-moudle_button__1c562 .Tooltip-module_helpOutlineIcon__399ac {
+/* ? 버튼 토글 상태  */
+/* active 상태 */
+.Tooltip-module_button__1c562.active .Tooltip-module_helpOutlineIcon__399ac {
     display: none;
 }
+
+.Tooltip-module_button__1c562.active .Tooltip-module_helpIcon__a2bd6 {
+    display: block;
+}
+
+.LoginFormAndSocialButtons-module_container__5a647 .LoginFormAndSocialButtons-module_content__5843f .LoginFormAndSocialButtons-module_socialContainer__a4f39 .LoginFormAndSocialButtons-module_fullWidthButtonList__2755b {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-top: 24px;
+}
+
+.LoginFormAndSocialButtons-module_container__5a647 .LoginFormAndSocialButtons-module_loginContainer__eae04 .LoginFormAndSocialButtons-module_divider__468a9 {
+    height: 8px;
+}
+
+
+.LoginFormAndSocialButtons-module_container__5a647 .LoginFormAndSocialButtons-module_loginContainer__eae04 .LoginFormAndSocialButtons-module_rememberMe__1c8e4 .LoginFormAndSocialButtons-module_tooltipWrapper__b7e7e {
+    margin-top: -2px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    padding: 1px;
+}
+
+element.style {
+    inset: 0px auto auto 0px;
+    transform: translate(calc(-100% + 399px), 282px);
+}
+
+.Tooltip-module_tooltip__74452 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    position: absolute;
+    z-index: 8;
+    box-sizing: border-box;
+    max-width: 288px;
+    padding: 12px;
+    border-radius: 4px;
+    color: #fff;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background-color: #343a40;
+}
+
+
+/* 말풍선 기준점 */
+.Tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+/* 말풍선 */
+.Tooltip-module_tooltip__74452 {
+  position: absolute;
+  top: calc(100% + 8px);   /* 버튼 아래 */
+  right: 0;                /* 버튼 오른쪽 정렬 */
+  
+  max-width: 240px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #212529;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: normal;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 100;
+}
+
+/* 열렸을 때 */
+.Tooltip-wrapper.active .Tooltip-module_tooltip__74452 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.Tooltip-module_tooltip__74452::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 12px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #212529 transparent;
+}
+
+
+.Tooltip-module_tooltip__74452 {
+  inset: auto !important;
+  transform: none !important;
+}
+
+
+.Tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.Tooltip-module_tooltip__74452 {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+
+  max-width: 240px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #212529;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.5;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 100;
+}
+
+.Tooltip-wrapper.active .Tooltip-module_tooltip__74452 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+.Tooltip-wrapper {
+  position: relative;   /* ⭐ 기준점 */
+
+}
+
+.Tooltip-module_tooltip__74452 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    position: absolute;
+    z-index: 8;
+    box-sizing: border-box;
+    max-width: 288px;
+    padding: 12px;
+    border-radius: 4px;
+    color: #fff;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background-color: #343a40;
+
+
+}
+
+.Tooltip-module_tooltip__74452 {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
     </style>
 
 
-<script>
-    const tooltipBtn = document.querySelector('.Tooltip-moudle_button__1c562');
 
-    tooltipBtn.addEventListener('click', () => {
-        tooltipBtn.classList.toggle('active');
+
+<script>
+    const tooltipButton = document.querySelector('.Tooltip-module_button__1c562');
+    </script>
+
+<script>
+/*    document.addEventListener('DOMContentLoaded', () => {
+      const tooltipButton = document.querySelector('.Tooltip-module_button__1c562');
+    
+      document.addEventListener('click', (e) => {
+        if (!tooltipButton.contains(e.target)) {
+          tooltipButton.classList.remove('active');
+        }
+      });
+    
+      tooltipButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        tooltipButton.classList.toggle('active');
+      });
+    });*/
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const wrapper = document.querySelector('.Tooltip-wrapper');
+      const button = wrapper.querySelector('.Tooltip-module_button__1c562');
+    
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        wrapper.classList.toggle('active');
+        button.classList.toggle('active'); // 아이콘 토글용
+      });
+    
+      document.addEventListener('click', () => {
+        wrapper.classList.remove('active');
+        button.classList.remove('active');
+      });
     });
-</script>
+    </script>
+
 
 
 
@@ -914,28 +1109,52 @@ svg:not(:root) {
                         <div class="LoginFormAndSocialButtons-module_tooltipWrapper__b7e7e">
                             <div class="Tooltip-module_tootipWrapper__8f62a 
                                         LoginFormAndSocialButtons-module_tooltip__a774f">
-                                <button type="button" 
-                                        class="Tooltip-module_button__1c562 
-                                                LoginFormAndSocialButtons-module_tooltip__a774f" 
-                                        aria-describedby="Tooltip_352">
 
-                                    <span class="Tooltip-module_helpIconWrap__9aa41">
-                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" 
-                                            class="WithProps-module_icon__d564b Tooltip-module_helpOutlineIcon__399ac" 
-                                            style="height: 16px; width: 16px;">
-                                            <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" fill="#495057"></path><path d="M9.60002 8.50002C9.60002 7.17454 10.6745 6.10002 12 6.10002C13.3255 6.10002 14.4 7.17454 14.4 8.50002C14.4 9.26494 14.0429 9.94609 13.4838 10.3866C13.0487 10.7294 12.5378 11.1492 12.1367 11.6426C11.7329 12.1392 11.4 12.7592 11.4 13.5V14.5H12.6V13.5C12.6 13.1363 12.7609 12.777 13.0678 12.3996C13.3773 12.0189 13.794 11.6699 14.2265 11.3291C15.0619 10.6709 15.6 9.64815 15.6 8.50002C15.6 6.5118 13.9882 4.90002 12 4.90002C10.0118 4.90002 8.40002 6.5118 8.40002 8.50002H9.60002Z" fill="#495057"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1.40002 12C1.40002 6.14581 6.14581 1.40002 12 1.40002C17.8542 1.40002 22.6 6.14581 22.6 12C22.6 17.8542 17.8542 22.6 12 22.6C6.14581 22.6 1.40002 17.8542 1.40002 12ZM12 2.60002C6.80855 2.60002 2.60002 6.80855 2.60002 12C2.60002 17.1915 6.80855 21.4 12 21.4C17.1915 21.4 21.4 17.1915 21.4 12C21.4 6.80855 17.1915 2.60002 12 2.60002Z" fill="#495057"></path></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" class="WithProps-module_icon__d564b Tooltip-module_helpIcon__a2bd6" style="height: 16px; width: 16px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.40002 12C1.40002 6.14578 6.14581 1.39999 12 1.39999C17.8542 1.39999 22.6 6.14578 22.6 12C22.6 17.8542 17.8542 22.6 12 22.6C6.14581 22.6 1.40002 17.8542 1.40002 12ZM12 6.09999C10.6745 6.09999 9.60002 7.17451 9.60002 8.49999H8.40002C8.40002 6.51177 10.0118 4.89999 12 4.89999C13.9882 4.89999 15.6 6.51177 15.6 8.49999C15.6 9.64812 15.0619 10.6709 14.2265 11.3291C13.794 11.6699 13.3773 12.0189 13.0678 12.3995C12.7609 12.777 12.6 13.1363 12.6 13.5V14.5H11.4V13.5C11.4 12.7591 11.7329 12.1391 12.1367 11.6425C12.5378 11.1491 13.0487 10.7294 13.4838 10.3865C14.0429 9.94606 14.4 9.26491 14.4 8.49999C14.4 7.17451 13.3255 6.09999 12 6.09999ZM13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" fill="#495057">
-                                            </path>
-                                        </svg>
-                                    </span>
+                                <div class="Tooltip-wrapper">
+                                    <button type="button" 
+                                            class="Tooltip-module_button__1c562 
+                                                    LoginFormAndSocialButtons-module_tooltip__a774f" 
+                                            aria-describedby="Tooltip_352">
 
-                                </button>
+                                        <span class="Tooltip-module_helpIconWrap__9aa41" 
+                                            style = "margin-top: 1px;
+                                                    margin-bottom: 4px;
+                                                    margin-left: 2px;
+                                                    padding: 1px;">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" 
+                                                class="WithProps-module_icon__d564b Tooltip-module_helpOutlineIcon__399ac" 
+                                                style="height: 16px; width: 16px;">
+                                                <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" fill="#495057">
+                                                </path>
+                                                <path d="M9.60002 8.50002C9.60002 7.17454 10.6745 6.10002 12 6.10002C13.3255 6.10002 14.4 7.17454 14.4 8.50002C14.4 9.26494 14.0429 9.94609 13.4838 10.3866C13.0487 10.7294 12.5378 11.1492 12.1367 11.6426C11.7329 12.1392 11.4 12.7592 11.4 13.5V14.5H12.6V13.5C12.6 13.1363 12.7609 12.777 13.0678 12.3996C13.3773 12.0189 13.794 11.6699 14.2265 11.3291C15.0619 10.6709 15.6 9.64815 15.6 8.50002C15.6 6.5118 13.9882 4.90002 12 4.90002C10.0118 4.90002 8.40002 6.5118 8.40002 8.50002H9.60002Z" fill="#495057">
+                                                </path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.40002 12C1.40002 6.14581 6.14581 1.40002 12 1.40002C17.8542 1.40002 22.6 6.14581 22.6 12C22.6 17.8542 17.8542 22.6 12 22.6C6.14581 22.6 1.40002 17.8542 1.40002 12ZM12 2.60002C6.80855 2.60002 2.60002 6.80855 2.60002 12C2.60002 17.1915 6.80855 21.4 12 21.4C17.1915 21.4 21.4 17.1915 21.4 12C21.4 6.80855 17.1915 2.60002 12 2.60002Z" fill="#495057">
+                                                </path>
+                                            </svg>
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" class="WithProps-module_icon__d564b Tooltip-module_helpIcon__a2bd6" style="height: 16px; width: 16px;">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.40002 12C1.40002 6.14578 6.14581 1.39999 12 1.39999C17.8542 1.39999 22.6 6.14578 22.6 12C22.6 17.8542 17.8542 22.6 12 22.6C6.14581 22.6 1.40002 17.8542 1.40002 12ZM12 6.09999C10.6745 6.09999 9.60002 7.17451 9.60002 8.49999H8.40002C8.40002 6.51177 10.0118 4.89999 12 4.89999C13.9882 4.89999 15.6 6.51177 15.6 8.49999C15.6 9.64812 15.0619 10.6709 14.2265 11.3291C13.794 11.6699 13.3773 12.0189 13.0678 12.3995C12.7609 12.777 12.6 13.1363 12.6 13.5V14.5H11.4V13.5C11.4 12.7591 11.7329 12.1391 12.1367 11.6425C12.5378 11.1491 13.0487 10.7294 13.4838 10.3865C14.0429 9.94606 14.4 9.26491 14.4 8.49999C14.4 7.17451 13.3255 6.09999 12 6.09999ZM13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" fill="#495057">
+                                                </path>
+                                            </svg>
+                                        </span>
+
+                             
+
+                                          <div class="Tooltip-module_tooltip__74452" id="Tooltip_2" role="tooltip" style="inset: 0px auto auto 0px; transform: translate(calc(-100% + 399px), 282px);">
+                                            이메일 또는 간편 로그인이 유지돼요. 보안을 위해 개인 기기에서 사용해 주세요.
+                                        </div>
+
+
+
+
+                                    </button>
+                                </div>
+
+
+
                             </div>
                         </div>
                     </div>
-
-
 <!---->
-
                     <div class="LoginFormAndSocialButtons-module_content__5843f">
                         <div class="LoginFormAndSocialButtons-module_socialContainer__a4f39">
                             <div class="LoginFormAndSocialButtons-module_fullWidthButtonList__2755b">
@@ -1000,8 +1219,6 @@ svg:not(:root) {
                                     </span>
                                 </button>
                             </div>
-
-
                             <div class="LoginFormAndSocialButtons-module_circularButtonList__f8ffd">
                                 <div class="LoginFormAndSocialButtons-module_buttonWrapper__a9aaf">
                                     <button aria-label="페이스북으로 시작하기" class="LoginFormAndSocialButtons-module_circularButton__57ecb" type="button">
@@ -1038,25 +1255,25 @@ svg:not(:root) {
                     </div>
 
                     
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
-
         </main>
-
     </div>
 
 
 
+ 
+<!--
+    <div class="Tooltip-wrapper">
+        <div class="Tooltip-module_tooltip__74452" role="tooltip">
+          이메일 또는 간편 로그인이 유지돼요.<br>
+          보안을 위해 개인 기기에서 사용해 주세요.
+        </div>
+    </div>-->
 
-    
+
 </body>
+
+
+
 </html>
