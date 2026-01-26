@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // fixed 포지션이므로 위치 직접 계산 필요
     function placeDropdown() {
         // 화면 기준 위치 정보 가져오기
+        // 버튼이 화면에서 어디 있는지 계산하고
+        // 아래(bottom)와 왼쪽(left) 위치만 사용
         const { bottom, left } = toggleBtn.getBoundingClientRect();
 
         // 열릴 위치 설정
