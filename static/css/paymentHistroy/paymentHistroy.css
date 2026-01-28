@@ -258,6 +258,37 @@ body {
     object-fit: cover;
 }
 
+.ConfirmModal_confirmModal__2YF-6 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    outline: none;
+    border-radius: 16px;
+    box-shadow: 0 32px 40px -2px #0a16461f, 0 0 5px #0a16460f;
+    background: #fff;
+    padding-block: 24px;
+    max-height: calc(100vh - 160px);
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ConfirmModal_sizeSheet__1WWyp, .ConfirmModal_sizeSheetMD__1p_ks, .ConfirmModal_sizeFull__2ZmFM {
+    transform: translateY(55%);
+    transition: .15s ease-out 50ms;
+    transition-property: transform;
+}
+.ConfirmModal_sizeSheet__1WWyp, .ConfirmModal_sizeSheetMD__1p_ks {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 16px 16px 0 0;
+    padding-top: 0;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+    max-height: 90%;
+    overflow: visible;
+}
+
 .CommentProfile_profileContainer .CommentProfile_avatarWrapper- .CommentProfile_supporterClub {
     position: absolute;
     width: 16px;
@@ -382,15 +413,6 @@ body {
     font-size: 14px;
 }
 
-.CommunityCommentWriteForm_overlay__1C4oL {
-    display: inline-flex;
-    position: fixed;
-    inset: 0;
-    z-index: 32;
-    background-color: #0000008a;
-    overflow: hidden;
-}
-
 .ConfirmModal_sizeSheet__1WWyp.ConfirmModal_contentAfterOpen__1YIRv, .ConfirmModal_sizeSheetMD__1p_ks.ConfirmModal_contentAfterOpen__1YIRv, .ConfirmModal_sizeFull__2ZmFM.ConfirmModal_contentAfterOpen__1YIRv {
     transform: translateY(0);
     transition-timing-function: ease-in;
@@ -419,20 +441,18 @@ body {
     margin-left: auto;
 }
 
+.Button_button__1U5se.Button_md__3yvYX {
+    padding-inline: 16px;
+    height: 40px;
+    font-size: 14px;
+}
 .Button_button__1U5se.Button_text__1eVrZ, .Button_button__1U5se.Button_textLink__3T2Bb {
     border: 0;
     border-color: #0000;
     padding: 0;
     height: auto;
 }
-.Button_button__1U5se.Button_md__3yvYX {
-    padding-inline: 16px;
-    height: 40px;
-    font-size: 14px;
-}
-button:not(:disabled) {
-    cursor: pointer;
-}
+
 .Button_button__1U5se {
     position: relative;
     transition-property: background-color, border-color, color, opacity;
@@ -779,4 +799,44 @@ button:not(:disabled) {
     opacity: .4;
     cursor: default;
     pointer-events: none;
+}
+.ConfirmModal_overlay__3JoaM {
+    display: inline-flex;
+    position: fixed;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 32;
+    background-color: #0000;
+    overflow: hidden;
+    animation: ConfirmModal_overlayInit__2ef3D .25s;
+}
+
+.CommunityCommentWriteForm_overlay__1C4oL {
+    display: inline-flex;
+    position: fixed;
+    inset: 0;
+    z-index: 32;
+    background-color: #0000008a;
+    overflow: hidden;
+}
+
+.Textarea_textarea__k26za {
+    display: block;
+    transition-property: border-color, background-color, color;
+    transition-duration: .15s;
+    outline: none;
+    border: 1px solid #dde2e6;
+    border-radius: 4px;
+    background: #fff;
+    padding: 16px;
+    resize: none;
+    width: 100%;
+    height: auto;
+    color: #212529;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
 }
