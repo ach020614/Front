@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // 에러 뱔견시 첫 번째 포커스 이동 (submit 중단)
+        // 에러 발견시 첫 번째 포커스 이동 (submit 중단)
         if (firstErrorInput) {
             // 상태 초기화: 다음 제출시 엔터 제출 방지
             isSubmitByButton = false;
