@@ -16,6 +16,7 @@
 </head>
 <body>
 <div id="app" class="main">
+    <!-- 상단 배너 영역 -->
     <div class="headBanner-container">
         <div class="headBanner-left">
             <div class="headBanner-icon">
@@ -888,7 +889,7 @@
     const kakaoPay = async () => {
         try {
             const response = await Bootpay.requestPayment({
-                application_id: '6978679234e947c090ae3727',
+                application_id: '[자바스크립트키]',
                 price: 1000,
                 order_name: '테스트결제',
                 order_id: 'TEST_ORDER_ID',
@@ -898,7 +899,7 @@
                 user: {
                     id: '회원아이디',
                     username: '이승민',
-                    phone: '01073672151',
+                    phone: '01000000000',
                     email: 'test@test.com',
                 },
                 items: [
